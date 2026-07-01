@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAS Otak Cerdas Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <main class="admin-container">
+    <section class="admin-card">
+      <h1>SAS Otak Cerdas</h1>
+      <p class="muted">Admin panel untuk edit undangan tanpa coding ulang.</p>
+
+      <div id="loginFormContainer">
+        <form id="adminLoginForm" class="admin-form">
+          <input type="email" id="adminEmail" placeholder="Email admin" required />
+          <input type="password" id="adminPassword" placeholder="Password admin" required />
+          <button type="submit">Masuk Admin</button>
+        </form>
+        <p id="loginError" class="error">Email atau password salah.</p>
+      </div>
+
+      <div id="adminPanel" class="admin-panel">
+        <h2>Editor Undangan</h2>
+        <div class="admin-grid">
+          <div class="field-group">
+            <label for="editBrideName">Nama Pengantin Wanita</label>
+            <input type="text" id="editBrideName" />
+          </div>
+          <div class="field-group">
+            <label for="editGroomName">Nama Pengantin Pria</label>
+            <input type="text" id="editGroomName" />
+          </div>
+          <div class="field-group full">
+            <label for="editOpeningText">Teks Penyambut / Undangan</label>
+            <textarea id="editOpeningText" rows="3"></textarea>
+          </div>
+          <div class="field-group">
+            <label for="editDateText">Tanggal Acara</label>
+            <input type="text" id="editDateText" />
+          </div>
+          <div class="field-group">
+            <label for="editMapLink">Link Google Maps</label>
+            <input type="text" id="editMapLink" />
+          </div>
+          <div class="field-group">
+            <label for="editDanaGroom">DANA Dimas</label>
+            <input type="text" id="editDanaGroom" />
+          </div>
+          <div class="field-group">
+            <label for="editDanaBride">DANA Siska</label>
+            <input type="text" id="editDanaBride" placeholder="Isi nomor DANA Siska" />
+          </div>
+          <div class="field-group full">
+            <label for="editBrideDesc">Deskripsi Siska</label>
+            <input type="text" id="editBrideDesc" />
+          </div>
+          <div class="field-group full">
+            <label for="editGroomDesc">Deskripsi Dimas</label>
+            <input type="text" id="editGroomDesc" />
+          </div>
+          <div class="field-group full">
+            <label for="editStoryOne">Love Story 1</label>
+            <textarea id="editStoryOne" rows="3"></textarea>
+          </div>
+          <div class="field-group full">
+            <label for="editStoryTwo">Love Story 2</label>
+            <textarea id="editStoryTwo" rows="3"></textarea>
+          </div>
+          <div class="field-group full">
+            <label for="editStoryThree">Love Story 3</label>
+            <textarea id="editStoryThree" rows="3"></textarea>
+          </div>
+          <div class="field-group full">
+            <label for="editPrayerText">Doa Pernikahan</label>
+            <textarea id="editPrayerText" rows="4"></textarea>
+          </div>
+          <div class="field-group full">
+            <label for="editClosingText">Teks Penutup</label>
+            <textarea id="editClosingText" rows="3"></textarea>
+          </div>
+        </div>
+
+        <h2>Editor Foto</h2>
+        <div class="admin-grid">
+          <div class="field-group">
+            <label>Foto Profil Siska</label>
+            <input type="file" id="editBrideImg" accept="image/*" />
+            <img id="previewBride" class="preview" src="assets/bride_real.jpg" alt="Preview Siska" />
+          </div>
+          <div class="field-group">
+            <label>Foto Profil Dimas</label>
+            <input type="file" id="editGroomImg" accept="image/*" />
+            <img id="previewGroom" class="preview" src="assets/groom_real.jpg" alt="Preview Dimas" />
+          </div>
+          <div class="field-group"><label>Foto Kemesraan 1</label><input type="file" id="editPhoto1" accept="image/*" /><img id="previewPhoto1" class="preview" src="assets/photo1.jpg" alt="Preview 1" /></div>
+          <div class="field-group"><label>Foto Kemesraan 2</label><input type="file" id="editPhoto2" accept="image/*" /><img id="previewPhoto2" class="preview" src="assets/photo2.jpg" alt="Preview 2" /></div>
+          <div class="field-group"><label>Foto Kemesraan 3</label><input type="file" id="editPhoto3" accept="image/*" /><img id="previewPhoto3" class="preview" src="assets/photo3.jpg" alt="Preview 3" /></div>
+          <div class="field-group"><label>Foto Kemesraan 4</label><input type="file" id="editPhoto4" accept="image/*" /><img id="previewPhoto4" class="preview" src="assets/photo4.jpg" alt="Preview 4" /></div>
+          <div class="field-group"><label>Foto Kemesraan 5</label><input type="file" id="editPhoto5" accept="image/*" /><img id="previewPhoto5" class="preview" src="assets/photo5.jpg" alt="Preview 5" /></div>
+          <div class="field-group"><label>Foto Kemesraan 6</label><input type="file" id="editPhoto6" accept="image/*" /><img id="previewPhoto6" class="preview" src="assets/photo6.jpg" alt="Preview 6" /></div>
+        </div>
+
+        <form class="admin-form" id="saveContentForm">
+          <button type="submit">Simpan Semua Perubahan</button>
+          <a class="btn ghost center-btn" href="main.html">Lihat Halaman Utama</a>
+          <p id="saveSuccess" class="success">Perubahan berhasil disimpan.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

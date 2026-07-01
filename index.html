@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Dimas & Siska</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="entrance-body">
+  <main class="entrance-wrap">
+    <div class="entrance-card reveal">
+      <span class="eyebrow">The Wedding Invitation</span>
+      <h1>Dimas &amp; Siska</h1>
+      <p class="date-line">Sabtu, 30 Mei 2026</p>
+      <p class="muted">Kepada Bapak/Ibu/Saudara/i, silakan tulis nama lengkap untuk membuka undangan.</p>
+      <form id="nameForm" class="name-form">
+        <input type="text" id="fullName" placeholder="Nama lengkap tamu" autocomplete="name" required />
+        <button type="submit">Buka Undangan</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+    <div class="loader-card">
+      <div class="loader-ring"></div>
+      <p id="loadingMessage">Mohon tunggu ya...</p>
+      <small>Sedang menyiapkan undangan terbaik untuk Anda</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

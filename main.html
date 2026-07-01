@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding of Dimas & Siska</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="main-body">
+  <a class="admin-top" href="admin.html" aria-label="Admin Panel">SAS Admin</a>
+
+  <audio id="weddingMusic" loop preload="none">
+    <source src="assets/backsound.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn" class="float-btn music-float" type="button">♫</button>
+  <button id="chatToggle" class="float-btn chat-float" type="button">💬</button>
+
+  <aside id="helpPanel" class="help-panel" aria-hidden="true">
+    <div class="help-head">
+      <strong>Bantuan</strong>
+      <button id="closeHelp" type="button">×</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <form id="chatForm" class="inline-form">
+      <input type="text" id="chatInput" placeholder="Tulis pertanyaan..." required />
+      <button type="submit">Kirim</button>
+    </form>
+  </aside>
+
+  <header class="hero section" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content reveal">
+      <span class="eyebrow">Assalamualaikum Warahmatullahi Wabarakatuh</span>
+      <h1 id="heroNames">Siska &amp; Dimas</h1>
+      <p class="date-line" id="weddingDateText">30 Mei 2026</p>
+      <p class="hero-copy" id="openingText">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan putra-putri kami.</p>
+      <div class="countdown" id="countdown">
+        <div><b id="days">00</b><span>Hari</span></div>
+        <div><b id="hours">00</b><span>Jam</span></div>
+        <div><b id="minutes">00</b><span>Menit</span></div>
+        <div><b id="seconds">00</b><span>Detik</span></div>
+      </div>
+      <div class="hero-actions">
+        <a id="mapButton" class="btn gold" href="https://maps.app.goo.gl/hRDqyxbHkKn1B6dF6" target="_blank" rel="noopener">Buka Google Maps</a>
+        <a class="btn ghost" href="#detail">Lihat Detail Acara</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section profile-section">
+      <span class="eyebrow">Mempelai</span>
+      <h2>Dengan bahagia kami memperkenalkan</h2>
+      <div class="profiles">
+        <article class="profile-card reveal">
+          <img id="brideImg" src="assets/bride_real.jpg" alt="Profil Siska" />
+          <h3 id="brideName">Siska Amelia</h3>
+          <p id="brideDesc">Putri kedua dari Bpk. Wahab &amp; Ibu Entin</p>
+        </article>
+        <div class="ampersand">&amp;</div>
+        <article class="profile-card reveal">
+          <img id="groomImg" src="assets/groom_real.jpg" alt="Profil Dimas" />
+          <h3 id="groomName">Dimas</h3>
+          <p id="groomDesc">Putra pilihan keluarga yang insya Allah menjadi imam terbaik</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="detail" class="section detail-section">
+      <span class="eyebrow">Detail Acara</span>
+      <h2>Akad &amp; Resepsi</h2>
+      <div class="detail-grid">
+        <article class="detail-card reveal">
+          <h3>Akad Nikah</h3>
+          <p><strong>Hari/Tanggal:</strong> Sabtu, 30 Mei 2026</p>
+          <p><strong>Waktu:</strong> 08.00 WIB s/d selesai</p>
+          <p><strong>Tempat:</strong> Ds. Pangrumasan, Kp. Bojongsari</p>
+        </article>
+        <article class="detail-card reveal">
+          <h3>Resepsi</h3>
+          <p><strong>Hari/Tanggal:</strong> Sabtu, 30 Mei 2026</p>
+          <p><strong>Waktu:</strong> 09.00 WIB s/d selesai</p>
+          <p><strong>Tempat:</strong> Ds. Pangrumasan, Kp. Bojongsari</p>
+        </article>
+      </div>
+      <a id="mapButton2" class="btn gold center-btn" href="https://maps.app.goo.gl/hRDqyxbHkKn1B6dF6" target="_blank" rel="noopener">Buka Google Maps</a>
+    </section>
+
+    <section class="section gallery-section">
+      <span class="eyebrow">Gallery</span>
+      <h2>Momen kebersamaan kami</h2>
+      <div class="gallery" id="gallery">
+        <img id="photo1" src="assets/photo1.jpg" alt="Foto kemesraan 1" />
+        <img id="photo2" src="assets/photo2.jpg" alt="Foto kemesraan 2" />
+        <img id="photo3" src="assets/photo3.jpg" alt="Foto kemesraan 3" />
+        <img id="photo4" src="assets/photo4.jpg" alt="Foto kemesraan 4" />
+        <img id="photo5" src="assets/photo5.jpg" alt="Foto kemesraan 5" />
+        <img id="photo6" src="assets/photo6.jpg" alt="Foto kemesraan 6" />
+      </div>
+    </section>
+
+    <section class="section story-section">
+      <span class="eyebrow">Love Story</span>
+      <h2>Perjalanan singkat kami</h2>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span>2021</span>
+          <h3>Pertemuan Pertama di Coffee Shop</h3>
+          <p id="storyOne">Kami saling mengenal dari pertemuan sederhana. Dari obrolan kecil, tumbuh rasa nyaman yang tidak pernah kami duga.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span>Menuju Hari Bahagia</span>
+          <h3>Dengan restu keluarga</h3>
+          <p id="storyTwo">Hubungan ini tidak hanya tumbuh karena rasa sayang, tetapi juga karena niat baik untuk menjaga satu sama lain dan melangkah ke arah yang lebih serius dengan restu keluarga.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span>2026</span>
+          <h3>Pernikahan</h3>
+          <p id="storyThree">Dengan memohon ridho Allah SWT, kami memantapkan hati untuk melangkah ke jenjang pernikahan dan membangun keluarga yang sakinah, mawaddah, warahmah.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section prayer-section">
+      <span class="eyebrow">Doa Pernikahan</span>
+      <blockquote id="prayerText">Semoga Allah menghimpun yang terserak dari keduanya, memberkahi mereka berdua, dan kiranya Allah meningkatkan kualitas keturunan mereka, menjadikannya pembuka pintu rahmat, sumber ilmu dan hikmah, serta pemberi rasa aman bagi umat.</blockquote>
+    </section>
+
+    <section class="section envelope-section">
+      <span class="eyebrow">Amplop Digital</span>
+      <h2>Doa restu adalah hadiah terbaik</h2>
+      <p class="muted">Bagi yang ingin berbagi hadiah, silakan kirim melalui DANA ke nomor berikut.</p>
+      <div class="dana-grid">
+        <article class="dana-card">
+          <span>DANA Dimas</span>
+          <strong id="danaGroom">085314300851</strong>
+          <button class="copy-btn" data-copy-target="danaGroom" type="button">Copy</button>
+        </article>
+        <article class="dana-card">
+          <span>DANA Siska</span>
+          <strong id="danaBride">Isi nomor via admin</strong>
+          <button class="copy-btn" data-copy-target="danaBride" type="button">Copy</button>
+        </article>
+      </div>
+      <a id="confirmWa" class="btn gold center-btn" href="https://wa.me/6285314300851?text=Assalamualaikum%2C%20saya%20ingin%20konfirmasi%20amplop%20digital%20untuk%20Dimas%20%26%20Siska." target="_blank" rel="noopener">Konfirmasi via WhatsApp</a>
+    </section>
+
+    <section class="section comments-section">
+      <span class="eyebrow">Komentar Publik</span>
+      <h2>Ucapan &amp; Doa Tamu</h2>
+      <div class="comment-list" id="commentList"></div>
+      <form id="commentForm" class="comment-form">
+        <textarea id="commentInput" rows="3" placeholder="Tulis ucapan dan doa terbaik..." required></textarea>
+        <button type="submit">Kirim Ucapan</button>
+      </form>
+    </section>
+
+    <section class="section share-section">
+      <span class="eyebrow">Bagikan Undangan</span>
+      <h2>Merupakan suatu kehormatan dan kebahagiaan</h2>
+      <p id="closingText">Bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu. Atas kehadiran dan doanya kami ucapkan terima kasih. Wassalamu’alaikum Warahmatullahi Wabarakatuh.</p>
+      <a id="shareWa" class="btn gold" target="_blank" rel="noopener">Share via WhatsApp</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
